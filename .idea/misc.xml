@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_ver_alumnos.xml" value="0.22" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/card_layout_cliente.xml" value="0.22" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_registrar_clientes.xml" value="0.17314814814814813" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_ver_alumnos.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_ver_clientes.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/fragment_first.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/fragment_first2.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/fragment_second.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/fragment_second2.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/fragment_second3.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/ver_alumnos_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/ver_menus_activity.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/Nueva carpeta/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/ver_menus_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable-v24/view_content_cliente.xml" value="0.1625" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/btn_registrar_menu.xml" value="0.1955" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/view_content_menu.xml" value="0.2075" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_registrar_clientes.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_registrar_menu.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_ver_clientes.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_ver_menus.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/card_layout_cliente.xml" value="0.22" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/card_layout_menu.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_registrar_clientes.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_registrar_menu.xml" value="0.25" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_ver_clientes.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_ver_menus.xml" value="0.1" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/fragment_first.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/fragment_first2.xml" value="0.2" />
+        <entry key="..\:/Users/nblad/Desktop/ggggggggg/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/fragment_second.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

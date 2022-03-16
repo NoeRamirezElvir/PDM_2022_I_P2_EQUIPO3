@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">PDM_2022_I_P2_EQUIPO3</string>
+    <string name="title_activity_ver_alumnos">VerAlumnosActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_ver_menus">VerMenusActivity</string>
+    <string name="agregar_cliente">Agregar Cliente</string>
+    <string name="image_clientes">image Clientes</string>
+    <string name="title_activity_registrar_clientes">RegistrarClientesActivity</string>
+    <string name="agregar_menu">Agregar Menu</string>
+    <string name="title_activity_registrar_menu">RegistrarMenuActivity</string>
+    <string name="im_menu_content">imagen menu</string>
+    <string name="c_digo">Código</string>
+    <string name="nombre_menu">Nombre</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="precio">Precio</string>
+    <string name="registrar_menu">Registrar</string>
+    <string name="imagen_codigo_menu">imagen codigo menu</string>
+    <string name="imagen_clientes">imagen clientes</string>
+    <string name="id_cliente">ID</string>
+    <string name="nombre_cliente">Nombre</string>
+    <string name="correo_electronico">Correo Electrónico</string>
+    <string name="registrar_cliente">Registrar</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="registro_menus">Registro Menús</string>
+    <string name="registro_clientes">Registro Clientes</string>
+</resources>

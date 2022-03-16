@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CBA7EAF0"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <View
+        android:id="@+id/vwCliente"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/view_content_cliente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imvCliente"
+            android:layout_width="match_parent"
+            android:layout_height="258dp"
+            android:contentDescription="@string/imagen_clientes"
+            app:srcCompat="@drawable/ic_im_cliente"
+            tools:ignore="ImageContrastCheck" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbtMasculino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:checked="true"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/masculino"
+                android:textIsSelectable="true" />
+
+            <RadioButton
+                android:id="@+id/rbtFemenino"
+                android:layout_marginStart="10dp"
+                android:textIsSelectable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/femenino"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/txtIdCliente"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:drawableLeft="@drawable/ic_id"
+            android:ems="10"
+            android:hint="@string/id_cliente"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/txtnombreCliente"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_nuevo_usuario"
+            android:ems="10"
+            android:hint="@string/nombre_cliente"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/txtCorreoCliente"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_correo"
+            android:ems="10"
+            android:hint="@string/correo_electronico"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btnRegistrarCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:background="@drawable/btn_registrar_menu"
+            android:text="@string/registrar_cliente"
+            android:textColor="#FF45320C"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            tools:ignore="TextContrastCheck"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

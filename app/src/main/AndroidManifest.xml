@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="hn.edu.ujcv.pdm_2022_i_p2_equipo3">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3">
+        <activity
+            android:name=".RegistrarMenuActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_menu"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarClientesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_clientes"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerMenusActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_menus"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerClientesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_alumnos"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

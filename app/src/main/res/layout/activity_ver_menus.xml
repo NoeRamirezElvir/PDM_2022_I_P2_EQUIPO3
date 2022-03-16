@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerMenusActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:foregroundTint="#FF911E12"
+            app:contentScrim="#FF911E12"
+            app:title="Registro de Menús"
+            app:collapsedTitleGravity="left"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+            >
+
+            <ImageView
+                android:id="@+id/im_menu"
+                android:layout_width="match_parent"
+                android:layout_height="252dp"
+                android:layout_marginTop="55dp"
+                android:background="#FFB65146"
+                android:contentDescription="TODO"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_rmenu"
+                app:layout_collapseMode="parallax"
+                tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_menu"
+                android:layout_width="match_parent"
+                android:background="#FF911E12"
+                app:titleMarginStart="130dp"
+                app:titleTextColor="@color/black"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbtnAgregarMenu"
+        android:layout_width="60dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#9FFF1800"
+        android:clickable="true"
+        android:contentDescription="@string/agregar_menu"
+        android:focusable="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        app:layout_anchor="@id/contentMenu"
+        app:layout_anchorGravity="end|bottom"
+        app:srcCompat="@drawable/ic_nuevo_menu"
+        app:maxImageSize="50dp"
+        tools:ignore="ImageContrastCheck" />
+
+    <include
+        android:id="@+id/contentMenu"
+        layout="@layout/content_ver_menus"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#A4CEF6"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:contentPadding="4dp"
+    android:foreground="?selectableItemBackground"
+    android:clickable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/itemImagenEmpleado"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/itemNombreEmpleado"
+            android:layout_width="236dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@+id/itemImagenEmpleado"
+            app:layout_constraintStart_toEndOf="@id/itemImagenEmpleado"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/itemCodigoEmpleado"
+            android:layout_width="236dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@+id/itemImagenEmpleado"
+            app:layout_constraintTop_toBottomOf="@+id/itemNombreEmpleado"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/itemPuestoEmpleado"
+            android:layout_width="236dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="70dp"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@+id/itemImagenEmpleado"
+            app:layout_constraintTop_toBottomOf="@+id/itemCodigoEmpleado"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

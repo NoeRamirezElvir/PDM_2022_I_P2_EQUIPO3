@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerEmpleadosActivity"
+    android:background="#AABDBF">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarEmpleado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:foregroundTint="#FF3700B3"
+            app:expandedTitleTextColor="@color/black"
+            app:collapsedTitleTextColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="#7DCF81"
+            app:title="Lista de Empleados"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            app:collapsedTitleGravity="center|left"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+            >
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="match_parent"
+                android:layout_height="236dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                android:src="@drawable/empleado_imageview"
+                android:contentDescription="TODO"
+                />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#7883CA"
+                app:popupTheme="@style/Theme.PDM_2022_I_P2_EQUIPO3.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/contentEmpleado"
+        layout="@layout/content_ver_empleados" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/ic_nuevo_empleado"
+        android:backgroundTint="#7DCF81"
+        android:contentDescription="Registrar Empleado"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

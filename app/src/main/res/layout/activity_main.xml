@@ -34,4 +34,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnVistaEmpleado"
+        android:layout_width="174dp"
+        android:layout_height="67dp"
+        android:textColor="@color/black"
+        android:backgroundTint="#FF3EB673"
+        android:layout_marginBottom="264dp"
+        android:text="Registro Empleados"
+        android:textSize="13dp"
+        android:drawableLeft="@drawable/ic_btn_empleado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/btnVistaPedidos"
+        android:layout_width="174dp"
+        android:layout_height="67dp"
+        android:textColor="@color/black"
+        android:backgroundTint="#FF3EB673"
+        android:layout_marginBottom="194dp"
+        android:text="Registro Pedidos"
+        android:textSize="13dp"
+        android:drawableLeft="@drawable/ic_btn_pedido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

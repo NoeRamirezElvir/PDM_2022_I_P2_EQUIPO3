@@ -1,47 +1,53 @@
 package hn.edu.ujcv.pdm_2022_i_p2_equipo3
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.adapter.RecyclerAdapterCliente
+import hn.edu.ujcv.pdm_2022_i_p2_equipo3.adapter.RecyclerAdapterEmpleado
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Cliente
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Empleado
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Menu
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Pedidos
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.databinding.ActivityVerClientesBinding
-import kotlinx.android.synthetic.main.activity_ver_clientes.*
+import hn.edu.ujcv.pdm_2022_i_p2_equipo3.databinding.ActivityVerEmpleadosBinding
 
-class VerClientesActivity : AppCompatActivity() {
+class VerEmpleadosActivity : AppCompatActivity() {
+    var listaEmpleados:ArrayList<Empleado>? = ArrayList()
     var listaClientes:ArrayList<Cliente>? = ArrayList()
     var listaMenus:ArrayList<Menu>? = ArrayList()
-    var listaEmpleados:ArrayList<Empleado>? = ArrayList()
     var listaPedidos:ArrayList<Pedidos>? = ArrayList()
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerAdapterCliente.ViewHolder>? = null
+    private var layoutManager:RecyclerView.LayoutManager? = null
+    private var adapter:RecyclerView.Adapter<RecyclerAdapterEmpleado.ViewHolder>? = null
+
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityVerClientesBinding
+    private lateinit var binding: ActivityVerEmpleadosBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityVerClientesBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        setSupportActionBar(binding.toolbarCliente)
-        inicio()
-        //ADAPTER RECYCLERVIEW
-        layoutManager = LinearLayoutManager(this)
-        binding.contentClientes.recyclerViewClientes.layoutManager = layoutManager
-        actualizarRecyclerView()
-        binding.fbtnAgregarCliente.setOnClickListener {enviarListaRegistrarCliente()}
 
+        binding = ActivityVerEmpleadosBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+        inicio()
+
+        layoutManager = LinearLayoutManager(this)
+        binding.contentEmpleado.recyclerViewEmpleado.layoutManager = layoutManager
+        actualizarRecyclerView()
+
+        binding.fab.setOnClickListener {
+            enviarRegistrarEmpleado()
+        }
     }
-    fun actualizarRecyclerView(){
-        adapter = RecyclerAdapterCliente(listaClientes!!,this)
-        binding.contentClientes.recyclerViewClientes.adapter = adapter
-    }
+
     private fun inicio(){
         val intent = intent
         if(intent.getParcelableArrayListExtra<Cliente>("Clientes") != null){
@@ -57,9 +63,13 @@ class VerClientesActivity : AppCompatActivity() {
             listaPedidos = intent.getParcelableArrayListExtra("Pedidos")!!
         }
     }
-    private fun enviarListaRegistrarCliente(){
-        val intent = Intent(this, RegistrarClientesActivity::class.java)
-        intent.putExtra("Clientes",listaClientes)
+    fun actualizarRecyclerView() {
+        adapter = RecyclerAdapterEmpleado(listaEmpleados!!, this)
+        binding.contentEmpleado.recyclerViewEmpleado.adapter = adapter
+    }
+    private fun enviarRegistrarEmpleado() {
+        val intent = Intent(this, RegistrarEmpleadoActivity::class.java)
+        intent.putExtra("Clientes", listaClientes)
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
@@ -76,5 +86,4 @@ class VerClientesActivity : AppCompatActivity() {
         startActivity(intent)
         this.finish()
     }
-
 }

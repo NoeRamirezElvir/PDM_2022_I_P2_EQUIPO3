@@ -15,13 +15,17 @@ import androidx.recyclerview.widget.RecyclerView
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.adapter.RecyclerAdapterCliente
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.adapter.RecyclerAdapterMenu
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Cliente
+import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Empleado
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Menu
+import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Pedidos
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.databinding.ActivityVerMenusBinding
 import kotlinx.android.synthetic.main.activity_ver_menus.*
 
 class VerMenusActivity : AppCompatActivity() {
     var listaClientes:ArrayList<Cliente>? = ArrayList()
     var listaMenus:ArrayList<Menu>? = ArrayList()
+    var listaEmpleados:ArrayList<Empleado>? = ArrayList()
+    var listaPedidos:ArrayList<Pedidos>? = ArrayList()
 
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<RecyclerAdapterMenu.ViewHolder>? = null
@@ -53,11 +57,19 @@ class VerMenusActivity : AppCompatActivity() {
         if(intent.getParcelableArrayListExtra<Menu>("Menu") != null){
             listaMenus = intent.getParcelableArrayListExtra("Menu")!!
         }
+        if(intent.getParcelableArrayListExtra<Menu>("Empleados") != null){
+            listaEmpleados = intent.getParcelableArrayListExtra("Empleados")!!
+        }
+        if(intent.getParcelableArrayListExtra<Menu>("Pedidos") != null){
+            listaPedidos = intent.getParcelableArrayListExtra("Pedidos")!!
+        }
     }
     private fun enviarListaRegistrarMenu(){
         val intent = Intent(this, RegistrarMenuActivity::class.java)
         intent.putExtra("Clientes",listaClientes)
         intent.putExtra("Menu",listaMenus)
+        intent.putExtra("Empleados", listaEmpleados)
+        intent.putExtra("Pedidos", listaPedidos)
         startActivity(intent)
     }
     override fun onBackPressed() {
@@ -65,6 +77,8 @@ class VerMenusActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("Clientes",listaClientes)
         intent.putExtra("Menu",listaMenus)
+        intent.putExtra("Empleados", listaEmpleados)
+        intent.putExtra("Pedidos", listaPedidos)
         startActivity(intent)
         this.finish()
     }

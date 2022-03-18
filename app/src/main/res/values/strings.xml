@@ -31,4 +31,8 @@
     <string name="femenino">Femenino</string>
     <string name="registro_menus">Registro Menús</string>
     <string name="registro_clientes">Registro Clientes</string>
+    <string name="title_activity_registrar_empleado">RegistrarEmpleado</string>
+    <string name="title_activity_ver_empleados">VerEmpleadosActivity</string>
+    <string name="title_activity_registrar_pedido">RegistrarPedidoActivity</string>
+    <string name="title_activity_ver_pedidos">VerPedidosActivity</string>
 </resources>

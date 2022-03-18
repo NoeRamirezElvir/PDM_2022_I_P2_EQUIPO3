@@ -11,6 +11,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3">
         <activity
+            android:name=".RegistrarPedidoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_pedido"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerPedidosActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_pedidos"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".RegistrarEmpleadoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registrar_empleado"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerEmpleadosActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_empleados"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
             android:name=".RegistrarMenuActivity"
             android:exported="false"
             android:label="@string/title_activity_registrar_menu"

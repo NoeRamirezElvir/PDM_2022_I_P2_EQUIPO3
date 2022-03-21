@@ -3,6 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable-v24/view_content_cliente.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable-v24/view_content_factura.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/btn_registrar_menu.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/ic_decrease.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/ic_imageview_pedido.xml" value="0.231" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/ic_list_pedidos.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/ic_nbe_empleado.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/view_content_empleado.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/view_content_menu.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/view_content_pedidos.xml" value="0.1655" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_registar_facturas.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_registrar_clientes.xml" value="0.2" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_registrar_menu.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_registrar_pedido.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_ver_empleados.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_ver_factura.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_ver_menus.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/activity_ver_pedidos.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/card_layout_cliente.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/card_layout_empleado.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/card_layout_facturas.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/card_layout_pedidos.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_registar_facturas.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_registrar_clientes.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_registrar_pedido.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_ver_empleados.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_ver_factura.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_ver_menus.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/layout/content_ver_pedidos.xml" value="0.25" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable-v24/view_content_cliente.xml" value="0.1" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/ic_add.xml" value="0.1005" />
         <entry key="..\:/Users/juan_/AndroidStudioProjects/PDM_2022_I_P2_EQUIPO3/app/src/main/res/drawable/ic_cancelar.xml" value="0.143" />

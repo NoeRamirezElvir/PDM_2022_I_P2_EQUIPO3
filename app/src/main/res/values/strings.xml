@@ -35,4 +35,6 @@
     <string name="title_activity_ver_empleados">VerEmpleadosActivity</string>
     <string name="title_activity_registrar_pedido">RegistrarPedidoActivity</string>
     <string name="title_activity_ver_pedidos">VerPedidosActivity</string>
+    <string name="title_activity_ver_factura">VerFactura</string>
+    <string name="title_activity_registar_facturas">RegistarFacturasActivity</string>
 </resources>

@@ -4,6 +4,6 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class Pedidos(var cliente:Cliente?, var empleado:Empleado?,
+class Pedidos(var noPedido: Int?,var cliente:Cliente?, var empleado:Empleado?,
               var listaPedidosMenu: ArrayList<Menu>?, var total:Double?, var imagen:Int?):Parcelable {
 }

@@ -7,10 +7,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.adapter.RecyclerAdapterCliente
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Cliente
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Empleado
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Menu
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Pedidos
+import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.*
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.databinding.ActivityVerClientesBinding
 import kotlinx.android.synthetic.main.activity_ver_clientes.*
 
@@ -19,6 +16,7 @@ class VerClientesActivity : AppCompatActivity() {
     var listaMenus:ArrayList<Menu>? = ArrayList()
     var listaEmpleados:ArrayList<Empleado>? = ArrayList()
     var listaPedidos:ArrayList<Pedidos>? = ArrayList()
+    var listaFacturas:ArrayList<Factura>? = ArrayList()
 
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapter: RecyclerView.Adapter<RecyclerAdapterCliente.ViewHolder>? = null
@@ -56,6 +54,9 @@ class VerClientesActivity : AppCompatActivity() {
         if(intent.getParcelableArrayListExtra<Menu>("Pedidos") != null){
             listaPedidos = intent.getParcelableArrayListExtra("Pedidos")!!
         }
+        if(intent.getParcelableArrayListExtra<Menu>("Facturas") != null){
+            listaFacturas = intent.getParcelableArrayListExtra("Facturas")!!
+        }
     }
     private fun enviarListaRegistrarCliente(){
         val intent = Intent(this, RegistrarClientesActivity::class.java)
@@ -73,6 +74,7 @@ class VerClientesActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas",listaFacturas)
         startActivity(intent)
         this.finish()
     }

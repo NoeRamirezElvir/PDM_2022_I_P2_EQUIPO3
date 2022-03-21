@@ -11,6 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3">
         <activity
+            android:name=".RegistarFacturasActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registar_facturas"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerFacturaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_factura"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
             android:name=".RegistrarPedidoActivity"
             android:exported="false"
             android:label="@string/title_activity_registrar_pedido"

@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
+import androidx.core.widget.doOnTextChanged
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -48,19 +49,23 @@ class RegistrarPedidoActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         inicializar()
 
-
         binding.fab.setOnClickListener { view ->
             if (lista.contains(spinnerMenu.selectedItem.toString()))
                 Toast.makeText(this, "Ya ha agregado este Menu", Toast.LENGTH_SHORT).show()
-            else
+            else if(txtNoPedido.text.isNullOrEmpty()){
+                Toast.makeText(this, "No de pedido esta vacio", Toast.LENGTH_SHORT).show()
+            }
                 agregarMenu(list, adapter)
         }
 
         btnRegistrarPedido.setOnClickListener {
             if (lista.isEmpty())
                 Toast.makeText(this, "Ingrese Menus", Toast.LENGTH_LONG).show()
-            else
+            else if (!validarBoton()){
+                Toast.makeText(this, "Valide campos", Toast.LENGTH_LONG).show()
+            }else{
                 mostrarDialog(list)
+            }
         }
 
         if (Build.VERSION.SDK_INT > 25) {
@@ -85,6 +90,7 @@ class RegistrarPedidoActivity : AppCompatActivity() {
     }
 
     private fun inicializar() {
+        validar()
         val intent = intent
         if(intent.getParcelableArrayListExtra<Cliente>("Clientes") != null){
             listaClientes = intent.getParcelableArrayListExtra("Clientes")!!
@@ -98,7 +104,6 @@ class RegistrarPedidoActivity : AppCompatActivity() {
         if (intent.getParcelableArrayListExtra<Empleado>("Pedidos") != null) {
             listaPedidos = intent.getParcelableArrayListExtra("Pedidos")!!
         }
-
         llenarSpinnerCliente()
         llenarSpinnerEmpleado()
         llenarSpinnerMenu()
@@ -155,6 +160,7 @@ class RegistrarPedidoActivity : AppCompatActivity() {
     private fun mostrarDialog(list: MutableList<ModelListView>) {
         var mensaje = "Cliente: " + spinnerCliente.selectedItem.toString() +
                 "\nEmpleado: " + spinnerEmpleado.selectedItem.toString() +
+                "\nNo. Pedido: " + txtNoPedido.text.toString() +
                 "\n\nMenu: \n"
         for (items in list) {
             mensaje += items.codigo + " " + items.nombre +
@@ -180,6 +186,7 @@ class RegistrarPedidoActivity : AppCompatActivity() {
 
 
     private fun guardarDatos(total:Double, list: MutableList<ModelListView>) {
+        var noPedido: Int
         var idCliente:String?=null
         var nombreCliente:String?=null
         var correoCliente:String?=null
@@ -189,6 +196,9 @@ class RegistrarPedidoActivity : AppCompatActivity() {
         var puestoEmpleado:String?=null
         var imagen2:Int?=null
         var listamenus:ArrayList<Menu>? = ArrayList()
+
+        noPedido = txtNoPedido.text.toString().toInt()
+
         for (items in listaClientes!!) {
             if (items.nombre == spinnerCliente.selectedItem.toString()) {
                 idCliente = items.id
@@ -216,11 +226,31 @@ class RegistrarPedidoActivity : AppCompatActivity() {
                 }
             }
         }
-        listaPedidos!!.add(Pedidos(Cliente(idCliente, nombreCliente, correoCliente, imagen),
+        listaPedidos!!.add(Pedidos(noPedido,Cliente(idCliente, nombreCliente, correoCliente, imagen),
         Empleado(codigoEmpleado, nombreEmpleado, puestoEmpleado, imagen2), listamenus!!, total,
         R.drawable.ic_list_pedidos))
     }
-
+    private fun validar(){
+        txtNoPedido.doOnTextChanged { text, start, before, count ->
+            if (text.isNullOrEmpty()){
+                txtNoPedido.error = "No. de Pedido Vacío"
+            }
+            if (text.toString().length >4 ){
+                txtNoPedido.error = "Número no permitido"
+            }
+            if (text.toString().toInt() <=0 ){
+                txtNoPedido.error = "No. no debe ser menor o igual a 0"
+            }
+        }
+    }
+    private fun validarBoton():Boolean{
+        when{
+            txtNoPedido.text.isNullOrEmpty() -> return false
+            txtNoPedido.text.length > 4 -> return false
+            txtNoPedido.text.toString().toInt() <= 0 -> return false
+            else ->return true
+        }
+    }
     private fun calcular(list: MutableList<ModelListView>):Double {
         var total:Double = 0.0
         for (items in list) {

@@ -12,10 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.adapter.RecyclerAdapterEmpleado
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Cliente
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Empleado
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Menu
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Pedidos
+import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.*
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.databinding.ActivityVerEmpleadosBinding
 
 class VerEmpleadosActivity : AppCompatActivity() {
@@ -23,6 +20,7 @@ class VerEmpleadosActivity : AppCompatActivity() {
     var listaClientes:ArrayList<Cliente>? = ArrayList()
     var listaMenus:ArrayList<Menu>? = ArrayList()
     var listaPedidos:ArrayList<Pedidos>? = ArrayList()
+    var listaFacturas:ArrayList<Factura>? = ArrayList()
 
     private var layoutManager:RecyclerView.LayoutManager? = null
     private var adapter:RecyclerView.Adapter<RecyclerAdapterEmpleado.ViewHolder>? = null
@@ -62,6 +60,9 @@ class VerEmpleadosActivity : AppCompatActivity() {
         if(intent.getParcelableArrayListExtra<Menu>("Pedidos") != null){
             listaPedidos = intent.getParcelableArrayListExtra("Pedidos")!!
         }
+        if(intent.getParcelableArrayListExtra<Menu>("Facturas") != null){
+            listaFacturas = intent.getParcelableArrayListExtra("Facturas")!!
+        }
     }
     fun actualizarRecyclerView() {
         adapter = RecyclerAdapterEmpleado(listaEmpleados!!, this)
@@ -73,6 +74,7 @@ class VerEmpleadosActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas",listaFacturas)
         startActivity(intent)
     }
 
@@ -83,6 +85,7 @@ class VerEmpleadosActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas",listaFacturas)
         startActivity(intent)
         this.finish()
     }

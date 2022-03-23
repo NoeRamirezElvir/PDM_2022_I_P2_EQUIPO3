@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerFacturaActivity">
+    tools:context=".VerFacturaActivity"
+    android:background="#E9F7F8">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_height="wrap_content"
@@ -21,8 +22,10 @@
             android:foregroundTint="#FF3700B3"
             android:layout_gravity="bottom|left"
             app:collapsedTitleTextColor="@color/white"
-            app:contentScrim="@color/purple_200"
+            app:contentScrim="@color/teal_700"
             app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginBottom="7dp"
+
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
             app:title="Lista de Facturas"
@@ -45,7 +48,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
+                android:background="#3B5570"
                 app:popupTheme="@style/Theme.PDM_2022_I_P2_EQUIPO3.PopupOverlay" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>

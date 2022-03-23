@@ -8,10 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.ui.AppBarConfiguration
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Cliente
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Empleado
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Menu
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Pedidos
+import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.*
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.databinding.ActivityRegistrarClientesBinding
 import kotlinx.android.synthetic.main.content_registrar_clientes.*
 import java.util.regex.Matcher
@@ -22,6 +19,7 @@ class RegistrarClientesActivity : AppCompatActivity() {
     var listaMenus:ArrayList<Menu>? = ArrayList()
     var listaEmpleados:ArrayList<Empleado>? = ArrayList()
     var listaPedidos:ArrayList<Pedidos>? = ArrayList()
+    var listaFacturas:ArrayList<Factura>?= ArrayList()
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityRegistrarClientesBinding
@@ -67,6 +65,9 @@ class RegistrarClientesActivity : AppCompatActivity() {
         if(intent.getParcelableArrayListExtra<Menu>("Pedidos") != null){
             listaPedidos = intent.getParcelableArrayListExtra("Pedidos")!!
         }
+        if (intent.getParcelableArrayListExtra<Factura>("Facturas") != null) {
+            listaFacturas = intent.getParcelableArrayListExtra("Facturas")!!
+        }
     }
     private fun enviarListaMenu(){
         val intent = Intent(this, VerClientesActivity::class.java)
@@ -74,6 +75,7 @@ class RegistrarClientesActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas", listaFacturas)
         startActivity(intent)
     }
     override fun onBackPressed() {

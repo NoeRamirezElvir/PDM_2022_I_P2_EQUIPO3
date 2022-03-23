@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas", listaFacturas)
         startActivity(intent)
     }
     private fun enviarListaMenu(){
@@ -60,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas", listaFacturas)
         startActivity(intent)
     }
     private fun enviarListaEmpleado() {
@@ -68,6 +70,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas", listaFacturas)
         startActivity(intent)
     }
     private fun enviarListaPedido() {
@@ -76,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas", listaFacturas)
         startActivity(intent)
     }
     private fun enviarListaFactura(){

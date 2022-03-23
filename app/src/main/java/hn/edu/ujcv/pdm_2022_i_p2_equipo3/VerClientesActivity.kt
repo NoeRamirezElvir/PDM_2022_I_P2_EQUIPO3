@@ -64,6 +64,7 @@ class VerClientesActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas", listaFacturas)
         startActivity(intent)
     }
 

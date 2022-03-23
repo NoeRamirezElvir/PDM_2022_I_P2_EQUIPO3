@@ -47,9 +47,9 @@ class RecyclerAdapterFactura(listaFact:ArrayList<Factura>? =null , activity: Ver
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val factura=listaFacturas[position]
-        holder.itemNoPedido.text = factura.pedido!!.noPedido.toString()
+        holder.itemNoPedido.text = "Pedido: "+factura.pedido!!.noPedido.toString()
         holder.itemTipoPago.text = "Tipo de Pago: "+factura.tipoPago
-        holder.itemEmpleado.text = "Atendido por: " +factura.empleadoFact
+        holder.itemEmpleado.text = "Atendido por: " +factura.empleadoFact!!.nombre
         holder.itemImagenFact.setImageResource(factura.imagenF!!)
     }
 

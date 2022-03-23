@@ -8,10 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.navigation.ui.AppBarConfiguration
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Cliente
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Empleado
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Menu
-import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.Pedidos
+import hn.edu.ujcv.pdm_2022_i_p2_equipo3.clases.*
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.databinding.ActivityRegistrarEmpleadoBinding
 import kotlinx.android.synthetic.main.content_registrar_empleado.*
 
@@ -20,6 +17,7 @@ class RegistrarEmpleadoActivity : AppCompatActivity() {
     var listaMenus:ArrayList<Menu>? = ArrayList()
     var listaEmpleados:ArrayList<Empleado>? = ArrayList()
     var listaPedidos:ArrayList<Pedidos>? = ArrayList()
+    var listaFacturas:ArrayList<Factura>?= ArrayList()
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityRegistrarEmpleadoBinding
@@ -55,7 +53,9 @@ class RegistrarEmpleadoActivity : AppCompatActivity() {
         if (intent.getParcelableArrayListExtra<Empleado>("Pedidos") != null) {
             listaPedidos = intent.getParcelableArrayListExtra("Pedidos")!!
         }
-
+        if (intent.getParcelableArrayListExtra<Factura>("Facturas") != null) {
+            listaFacturas = intent.getParcelableArrayListExtra("Facturas")!!
+        }
         validar()
         llenarSpinner()
     }
@@ -65,6 +65,7 @@ class RegistrarEmpleadoActivity : AppCompatActivity() {
         intent.putExtra("Menu",listaMenus)
         intent.putExtra("Empleados", listaEmpleados)
         intent.putExtra("Pedidos", listaPedidos)
+        intent.putExtra("Facturas", listaFacturas)
         startActivity(intent)
     }
 

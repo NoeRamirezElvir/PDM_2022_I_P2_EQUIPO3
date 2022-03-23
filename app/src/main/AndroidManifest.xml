@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="hn.edu.ujcv.pdm_2022_i_p2_equipo3">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3">
+        <activity
+            android:name=".RegistarFacturasActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registar_facturas"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
+        <activity
+            android:name=".VerFacturaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ver_factura"
+            android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.NoActionBar" />
         <activity
             android:name=".RegistrarPedidoActivity"
             android:exported="false"

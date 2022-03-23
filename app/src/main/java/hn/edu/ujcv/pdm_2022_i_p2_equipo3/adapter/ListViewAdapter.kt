@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.R
 import hn.edu.ujcv.pdm_2022_i_p2_equipo3.RegistrarPedidoActivity
+import java.text.DecimalFormat
 
 class ListViewAdapter(var mCxtx: Context, var resources:Int, var items:List<ModelListView>)
     :ArrayAdapter<ModelListView>(mCxtx,resources,items){
@@ -39,7 +40,7 @@ class ListViewAdapter(var mCxtx: Context, var resources:Int, var items:List<Mode
                 cantidad.text = nueva_cantidad.toString()
                 precio.text = "L"+sub
                 mItem.cantidad=nueva_cantidad
-                mItem.subtotal=sub
+                mItem.subtotal= sub
             }
         }
 

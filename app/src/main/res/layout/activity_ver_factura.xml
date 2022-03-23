@@ -5,55 +5,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerPedidosActivity">
+    tools:context=".VerFacturaActivity"
+    android:background="#E9F7F8">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_width="match_parent"
         android:theme="@style/Theme.PDM_2022_I_P2_EQUIPO3.AppBarOverlay">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbarFact"
-            android:foregroundTint="#FF3700B3"
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
             android:backgroundTint="#FF3700B3"
-            app:expandedTitleTextColor="@color/white"
-            app:collapsedTitleTextColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/teal_200"
-            app:title="Lista de Pedidos"
-            app:expandedTitleMarginStart="48dp"
+            android:foregroundTint="#FF3700B3"
+            android:layout_gravity="bottom|left"
+            app:collapsedTitleTextColor="@color/white"
+            app:contentScrim="@color/teal_700"
             app:expandedTitleMarginEnd="64dp"
-            app:collapsedTitleGravity="center|left"
+            app:expandedTitleMarginBottom="7dp"
+
+            app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+            app:title="Lista de Facturas"
+            app:expandedTitleTextColor="@color/black"
             >
+
             <ImageView
                 android:id="@+id/imageview"
                 android:layout_width="match_parent"
                 android:layout_height="236dp"
                 android:layout_marginTop="50dp"
-                android:scaleType="fitXY"
-                tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck"
-                android:fitsSystemWindows="true"
-                app:layout_collapseMode="parallax"
-                android:src="@drawable/ic_imageview_pedido"
                 android:contentDescription="TODO"
-                />
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_fact_list"
+                app:layout_collapseMode="parallax"
+                tools:ignore="ContentDescription,HardcodedText,ImageContrastCheck" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/purple_700"
+                android:background="#3B5570"
                 app:popupTheme="@style/Theme.PDM_2022_I_P2_EQUIPO3.PopupOverlay" />
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
-        android:id="@+id/contentPedido"
-        layout="@layout/content_ver_pedidos" />
+        android:id="@+id/contentFactura"
+        layout="@layout/content_ver_factura"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -62,7 +66,6 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/icono_nuevo_pedido"
-        app:maxImageSize="40dp"/>
+        app:srcCompat="@drawable/icono_nuevo_pedido" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
